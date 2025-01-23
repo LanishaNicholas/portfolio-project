@@ -1,0 +1,13 @@
+#home {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  #home .btn {
+    transition: all 0.3s ease;
+  }
+  
+  #home .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+  }
+  

@@ -1,0 +1,62 @@
+/* General Section Styling */
+#about {
+    background-color: #f8f9fa;
+  }
+  
+  h2 {
+    font-weight: 700;
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    
+  }
+  
+  .profile-pic {
+    width: 350px;
+    height: 350px;
+    border: none; /* Remove any unwanted border */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    object-fit: cover; /* Ensures the image scales nicely */
+    border-radius: 15px; /* Rounds the corners slightly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  }
+  
+  /* Add hover effect to make it visually appealing */
+  .profile-pic:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  
+  /* Experience Section Styling */
+  .experience-section ul.timeline {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .experience-section ul.timeline li {
+    margin-bottom: 2rem;
+  }
+  
+  .experience-section ul.timeline h4 {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .experience-section ul.timeline .text-muted {
+    font-size: 0.9rem;
+  }
+  
+  /* Skills Section */
+  .skills-section .badge {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+  }
+
+  .headingtxt{
+    color: #007997;
+  }
+  
