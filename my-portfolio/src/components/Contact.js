@@ -8,6 +8,9 @@ const Contact = () => {
     message: "",
   });
 
+  // New state for managing button loading/disabled state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -15,6 +18,9 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Disable the button on first click
+    setIsSubmitting(true);
 
     try {
       const response = await fetch("https://portfolio-project-kiu9.onrender.com/api/contact", {
@@ -32,6 +38,9 @@ const Contact = () => {
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred. Please try again later.");
+    } finally {
+      // Re-enable the button after the request completes
+      setIsSubmitting(false);
     }
   };
 
@@ -73,8 +82,8 @@ const Contact = () => {
               required
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Send
+          <Button variant="primary" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send"}
           </Button>
         </Form>
       </Container>
